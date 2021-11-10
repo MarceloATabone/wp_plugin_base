@@ -1,0 +1,12 @@
+.mtabone_painel_title{
+    display: inline-block;
+    margin-right: 5px;
+}
+.mtabone_painel_title h1{
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+    color: royalblue;
+}
