@@ -1,10 +1,10 @@
 <?php
 
-    function mtabone_painel(){
+    function mtabone_panel(){
         add_menu_page('Plugin Base','Plugin Base', 'manage_options', 'mtabone-main-menu', 'mtabone_mainMenu','dashicons-admin-generic');
-        add_submenu_page('mtabone-main-menu', "Geral" , "► Geral"  , 'manage_options', 'mtabone-main-menu' );
-        add_submenu_page('mtabone-main-menu', "Content", "► Content" , 'manage_options', 'mt-mm-sub-content' , 'mtabone_subMenu_Content');
-        add_submenu_page('mtabone-main-menu', "Settings", "► Settings" , 'manage_options', 'mt-mm-sub-settings' , 'mtabone_subMenu_Settings');
+        add_submenu_page('mtabone-main-menu', "Geral" , "► ".$GLOBALS['mtabone_panel_title_general'].""  , 'manage_options', 'mtabone-main-menu' );
+        add_submenu_page('mtabone-main-menu', "Content", "► ".$GLOBALS['mtabone_panel_title_content']."" , 'manage_options', 'mt-mm-sub-content' , 'mtabone_subMenu_Content');
+        add_submenu_page('mtabone-main-menu', "Settings", "► ".$GLOBALS['mtabone_panel_title_settings']."" , 'manage_options', 'mt-mm-sub-settings' , 'mtabone_subMenu_Settings');
     }  
 
     function mtabone_mainMenu(){

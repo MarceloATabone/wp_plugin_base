@@ -1,13 +1,23 @@
 <?php
     function mtabone_openDependencies(){
+        mtabone_loadDefaultVariables();
         mtabone_inActivation();
         mtabone_loadResources();
-        mtabone_createAdminPainel();
+        mtabone_createAdminPanel();
         mtabone_loadControllers();
         mtabone_loadShortcodes();
     }
 
-    // Plugin Activation----------------->
+    function mtabone_loadDefaultVariables(){
+        include( plugin_dir_path( __FILE__ ) . '/mtabone_default.php');
+        mtabone_createDefaultVars();
+        // Language controller --------------->
+        include( plugin_dir_path( __FILE__ ) . '/controllers/mtabone-controller-language.php');
+        mtabone_controllerLanguage();
+        //-----------------------------------<  
+    }
+
+    // Plugin Activation ---------------->
     function mtabone_inActivation(){
 
     }
@@ -19,10 +29,10 @@
     }
     //-----------------------------------<  
 
-    // Painel Menu Admin----------------->
-    function mtabone_createAdminPainel(){
-        include( plugin_dir_path( __FILE__ ) . '/controllers/mtabone-controller-painel.php');
-        mtabone_painel();
+    // Panel Menu Admin----------------->
+    function mtabone_createAdminPanel(){
+        include( plugin_dir_path( __FILE__ ) . '/controllers/mtabone-controller-panel.php');
+        mtabone_panel();
     }
     //-----------------------------------<  
 
