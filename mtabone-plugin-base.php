@@ -15,6 +15,11 @@
     }
     //---------------------------------
 
+    // Plugin Activation ---------------->
+    require_once plugin_dir_path(__FILE__).'/includes/controllers/mtabone-controller-activation.php';
+    register_activation_hook(__FILE__, 'mtabone_activationPlugin');
+    //-----------------------------------<  
+
     // Plugin MAIN----------------------->
     include( plugin_dir_path(__FILE__) . '/includes/mtabone-main.php' );
     add_action('admin_menu', 'mtabone_openDependencies');
