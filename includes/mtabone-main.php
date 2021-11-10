@@ -25,7 +25,10 @@
 
     // LOADS CSS AND JS AND LIBS--------->
     function mtabone_loadResources(){
-
+        include( plugin_dir_path( __FILE__ ) . '/controllers/mtabone-controller-scripts.php');
+        add_action( 'admin_enqueue_scripts', 'mtabone_loadLibs' );
+        add_action( 'admin_enqueue_scripts', 'mtabone_loadCss' );
+        add_action( 'admin_enqueue_scripts', 'mtabone_loadScripts' );
     }
     //-----------------------------------<  
 
