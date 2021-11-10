@@ -35,9 +35,11 @@
     }
     //-----------------------------------<  
 
-    // Controllers----------------------->
+    // Managers ----------------------->
     function mtabone_loadControllers(){
-
+        include( plugin_dir_path( __FILE__ ) . '/managers/mtabone-manage-content.php');
+        include( plugin_dir_path( __FILE__ ) . '/managers/mtabone-manage-general.php');
+        include( plugin_dir_path( __FILE__ ) . '/managers/mtabone-manage-settings.php');
     }
     //-----------------------------------<  
 
