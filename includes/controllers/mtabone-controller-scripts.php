@@ -8,5 +8,11 @@
         wp_enqueue_style('mtabone-style-css', plugins_url('../css/mtabone-style.css', __FILE__));
     }
     function mtabone_loadScripts() {
+        // Load JS Util ---->
+        wp_register_script( 'mtabone_utilities_scripts', plugins_url( '../../includes/js/mtabone-utilities.js', __FILE__ ),array('jquery'),false,true );
+        wp_enqueue_script( 'mtabone_utilities_scripts');
 
+        $script_utilitiesData = array('admin_ajax' => admin_url( 'admin-ajax.php' ));
+        wp_localize_script('mtabone_utilities_scripts','wpa_dataUtilities', $script_utilitiesData );
+        //------------------<
     }
