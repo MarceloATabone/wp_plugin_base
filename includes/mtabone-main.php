@@ -1,21 +1,17 @@
 <?php
 
     function mtabone_openDependencies(){
-        mtabone_loadDefaultVariables();
+        mtabone_controllLanguage();
         mtabone_loadResources();
         mtabone_createAdminPanel();
         mtabone_loadControllers();
         mtabone_loadShortcodes();
     }
 
-    // Create VARS & CHANGE Language ---->
-    function mtabone_loadDefaultVariables(){
-        include( plugin_dir_path( __FILE__ ) . '/mtabone_default.php');
-        mtabone_createDefaultVars();
-        // Language controller --------------->
+    // Language controller --------------->
+    function mtabone_controllLanguage(){
         include( plugin_dir_path( __FILE__ ) . '/controllers/mtabone-controller-language.php');
         mtabone_controllerLanguage();
-        //-----------------------------------<  
     }
     //-----------------------------------<  
 

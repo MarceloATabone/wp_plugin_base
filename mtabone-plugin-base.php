@@ -15,6 +15,11 @@
     }
     //---------------------------------
 
+    // Plugin Global Vars ---------------->
+    include( plugin_dir_path( __FILE__ ) . '/includes/mtabone_default.php');
+    mtabone_createDefaultVars();
+    //-----------------------------------<  
+
     // Plugin Activation ---------------->
     require_once plugin_dir_path(__FILE__).'/includes/controllers/mtabone-controller-activation.php';
     register_activation_hook(__FILE__, 'mtabone_activationPlugin');
