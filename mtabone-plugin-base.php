@@ -27,5 +27,5 @@
 
     // Plugin MAIN----------------------->
     include( plugin_dir_path(__FILE__) . '/includes/mtabone-main.php' );
-    add_action('admin_menu', 'mtabone_openDependencies');
+    mtabone_openDependencies();
     //-----------------------------------<  
